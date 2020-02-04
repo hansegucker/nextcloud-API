@@ -75,7 +75,7 @@ class ParticipantInCallFlag(enum.IntEnum):
     PROVIDES_VIDEO = 4
 
 
-class ActorType(enum):
+class ActorType:
     GUESTS = "guests"
     USERS = "users"
     bots = "bots"
@@ -84,6 +84,11 @@ class ActorType(enum):
 class WebinaryLobbyState(enum.IntEnum):
     NO_LOBBY = 0
     LOBBY = 1
+
+
+class InviteSource:
+    GROUPS = "groups"
+    CIRCLES = "circles"
 
 
 QUOTA_UNLIMITED = -3
