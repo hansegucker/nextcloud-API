@@ -51,6 +51,16 @@ class Conversations(WithRequester):
 
         return self.requester.post(data=data)
 
+    def get_conversations(self):
+        """
+        Get conversations
+
+        :return: Conversations
+        :rtype: list
+        """
+
+        return self.requester.get()
+
     def get_conversation(self, conversation_id):
         """
         Get single conversation
