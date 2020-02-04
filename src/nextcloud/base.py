@@ -43,6 +43,49 @@ class Permission(enum.IntEnum):
     ALL = 31
 
 
+# Constants for Talk
+# https://nextcloud-talk.readthedocs.io/en/latest/constants/
+
+
+class ConversationType(enum.IntEnum):
+    ONE_TO_ONE = 1
+    GROUP = 2
+    PUBLIC = 3
+    CHANGELOG = 4
+
+
+class ReadState(enum.IntEnum):
+    READ_WRITE = 0
+    READ_ONLY = 1
+
+
+class ParticipantType(enum.IntEnum):
+    OWNER = 1
+    MODERATOR = 2
+    USER = 3
+    GUEST = 4
+    PUBLIC_LINK = 5
+    GUEST_MODERATOR = 6
+
+
+class ParticipantInCallFlag(enum.IntEnum):
+    DISCONNECTED = 0
+    IN_CALL = 1
+    PROVIDES_AUDIO = 2
+    PROVIDES_VIDEO = 4
+
+
+class ActorType(enum):
+    GUESTS = "guests"
+    USERS = "users"
+    bots = "bots"
+
+
+class WebinaryLobbyState(enum.IntEnum):
+    NO_LOBBY = 0
+    LOBBY = 1
+
+
 QUOTA_UNLIMITED = -3
 
 
