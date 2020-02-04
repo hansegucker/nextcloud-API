@@ -3,7 +3,6 @@ import enum
 
 
 class WithRequester(object):
-
     API_URL = NotImplementedError
 
     def __init__(self, requester):
@@ -14,7 +13,7 @@ class WithRequester(object):
         """ Get requester instance """
         # dynamically set API_URL for requester
         self._requester.API_URL = self.API_URL
-        self._requester.SUCCESS_CODE = getattr(self, 'SUCCESS_CODE', None)
+        self._requester.SUCCESS_CODE = getattr(self, "SUCCESS_CODE", None)
         return self._requester
 
 
@@ -73,6 +72,13 @@ class ParticipantInCallFlag(enum.IntEnum):
     IN_CALL = 1
     PROVIDES_AUDIO = 2
     PROVIDES_VIDEO = 4
+
+
+class ParticipantNotificationLevel(enum.IntEnum):
+    DEFAULT = 0
+    ALWAYS_NOTIFY = 1
+    NOTIFY_ON_MENTION = 2
+    NEVER_NOTIFY = 3
 
 
 class ActorType:
